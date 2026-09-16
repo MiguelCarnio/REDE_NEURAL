@@ -1,6 +1,11 @@
-#  Aproximação Universal de Funções com Redes Neurais em PyTorch
+# Aproximação Universal de Funções com Redes Neurais em PyTorch
 
-> Um aproximador interativo de funções por partes (piecewise functions) construído em Python e PyTorch. O projeto permite gerar funções sintéticas complexas, configurar a arquitetura da rede, treinar/continuar treinos e visualizar os resultados graficamente.
+![Python](https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black)
+
+> Um aproximador interativo de funções por partes (*piecewise functions*) construído em Python e PyTorch. O projeto permite gerar funções sintéticas complexas, configurar a arquitetura da rede, treinar/continuar treinos e visualizar os resultados graficamente.
 
 ---
 
@@ -8,7 +13,7 @@
 
 Este projeto demonstra o **Teorema da Aproximação Universal** por meio de um sistema interativo em terminal. Ele permite ao usuário combinar múltiplos tipos de funções em diferentes intervalos de $X$, adicionar ruído estocástico e treinar uma Rede Neural Perceptron Multicamadas (MLP) para aprender a função resultante.
 
-###  Principais Destaques
+### Principais Destaques
 
 * **Gerenciador de Modelos (.pth)**: Permite salvar checkpoints completos (pesos, estado do otimizador e configurações de dados) para retomar treinamentos de onde pararam.
 * **Gerador Dinâmico de Funções**: Suporte a 12 tipos de funções matemáticas combináveis em subintervalos.
@@ -54,56 +59,3 @@ REDE_NEURAL/
 │   └── rede.py               # Funções matemáticas, menu de configuração e arquiteturas PyTorch
 ├── o mais treinado .pth      # Modelo pré-treinado salvo
 └── README.md                 # Documentação do repositório
-```
-
----
-
-## ⚙️ Instalação e Requisitos
-
-### Pré-requisitos
-
-* **Python 3.8+**
-* Bibliotecas: `torch`, `numpy`, `matplotlib`
-
-### Passos para Instalação
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/MiguelCarnio/REDE_NEURAL.git
-   cd REDE_NEURAL/code
-   ```
-
-2. Instale as dependências:
-   ```bash
-   pip install torch numpy matplotlib
-   ```
-
----
-
-## 💻 Como Usar
-
-Para rodar o projeto, acesse a pasta `code` e execute o script `main.py`:
-
-```bash
-python main.py
-```
-
-### Fluxo de Execução
-
-1. **Gerenciador de Modelos**:
-   * Escolha `[0]` para criar um novo modelo do zero.
-   * Escolha o número correspondente a um arquivo `.pth` existente para carregar o modelo e suas configurações e continuar o treinamento.
-2. **Configuração**:
-   * Se for um modelo novo, defina as funções, número de amostras, nível de ruído, tamanho da rede, épocas e *learning rate*.
-3. **Treinamento**:
-   * O console exibirá a evolução da perda (*Loss MSE*) época a época.
-4. **Salvamento e Exibição**:
-   * O modelo e suas configurações são salvos automaticamente no arquivo `.pth` indicado.
-   * Um gráfico no Matplotlib exibirá os dados originais (cinza) sobrepostos à curva aproximada pela rede neural (vermelho).
-
----
-
-##  Contato
-
-Desenvolvido por **Miguel Carnio**
-* GitHub: [@MiguelCarnio](https://github.com/MiguelCarnio)
